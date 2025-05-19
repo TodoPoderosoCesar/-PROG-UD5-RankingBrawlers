@@ -8,14 +8,16 @@ public class Brawler {
     public int attack;
     public int defense;
     public int speed;
+    public int rank;
     
-    public Brawler(String name, String rarity, int health, int attack, int defense, int speed) {
+    public Brawler(String name, String rarity, int health, int attack, int defense, int speed, int rank) {
         this.name = name;
         this.rarity = rarity;
         this.health = health;
         this.attack = attack;
         this.defense = defense;
         this.speed = speed;
+        this.rank = rank;
     }
 
     public String getName() {
@@ -66,5 +68,19 @@ public class Brawler {
         this.speed = speed;
     }
 
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    @Override
+    public String toString() {
+        return "Brawler [name=" + name + ", rarity=" + rarity + ", health=" + health + ", attack=" + attack
+                + ", defense=" + defense + ", speed=" + speed + ", rank=" + rank + "]";
+    }
+    
     
 }
